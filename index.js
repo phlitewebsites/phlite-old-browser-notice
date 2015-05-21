@@ -1,5 +1,9 @@
 module.exports = (function () {
-  var html = '' +
+  var doc = global.document
+  var elNotice = doc.createElement('div')
+  elNotice.id = 'oldBrowserNotice'
+  elNotice.className = 'wrap__oldBrowserNotice'
+  elNotice.innerHTML = '' +
     '<div id="oldBrowserNotice" class="wrap__oldBrowserNotice">' +
       '<div class="oldBrowserNotice">' +
         '<div class="inner__oldBrowserNotice">' +
@@ -33,7 +37,7 @@ module.exports = (function () {
           '</div>' +
         '</div>' +
       '</div>' +
-    '</div>';
+    '</div>'
 
-  document.write(html);
+  doc.body.appendChild(elNotice)
 })();
