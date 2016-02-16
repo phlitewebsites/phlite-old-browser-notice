@@ -1,19 +1,34 @@
 {
   "name": "old-browser-notice",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "old browser notice",
-  "main": "index.js",
+  "author": "Dan Hayden <pythonic1@gmail.com>",
+  "license": "MIT",
+  "main": "src/old-browser-notice",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "semistandard || true",
+    "build": "webpack --config build/webpack.config.js",
+    "watch": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "semistandard": "^7.0.5",
+    "string-replace-loader": "^1.0.0",
+    "webpack": "^1.12.13"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pythonic1/old-browser-notice.git"
+    "url": "https://github.com/danhayden/old-browser-notice.git"
   },
-  "author": "Dan Pythonic <pythonic1@gmail.com>",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pythonic1/old-browser-notice/issues"
+    "url": "https://github.com/danhayden/old-browser-notice/issues"
   },
-  "homepage": "https://github.com/pythonic1/old-browser-notice"
+  "homepage": "https://github.com/danhayden/old-browser-notice",
+  "semistandard": {
+    "ignore": [
+      "dist/**"
+    ]
+  }
 }

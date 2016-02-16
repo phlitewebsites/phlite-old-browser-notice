@@ -1,19 +1,40 @@
 # Old Browser Notice
 
+## Usage
+
+Using Webpack or Browserify
+
+```js
+var oldBrowserNotice = require('old-browser-notice');
+var broswerNotSupported = false; // some test
+
+if (broswerNotSupported) {
+  oldBrowserNotice()
+}
+
+//or
+
+var broswerNotSupported = false; // some test
+
+if (broswerNotSupported) {
+  document.write('<script src="dist/old-browser-notice.js"></script>');
+  document.write('<script>oldBrowserNotice();</script>');
+}
+
+```
+
+or Browser
+
 ```html
 <!doctype html>
 <html>
-<head>
-  <title></title>
-</head>
-<body>
+  <head>...</head>
+  <body>
+    ...
 
-  <!--[if lt IE 9]>
-    <link rel="stylesheet" href="oldBrowserNotice.css">
-    <script src="oldBrowserNotice.js"></script>
-  <![endif]-->
-</body>
+    <!--[if IE]>
+      <script src="dist/old-browser-notice.js"></script>
+    <![endif]-->
+  </body>
 </html>
 ```
-
-Intended for use with Browserify and Sass
