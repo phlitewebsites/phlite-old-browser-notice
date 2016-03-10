@@ -4,7 +4,7 @@
   "description": "old browser notice",
   "author": "Dan Hayden <pythonic1@gmail.com>",
   "license": "MIT",
-  "main": "src/old-browser-notice",
+  "main": "dist/old-browser-notice",
   "scripts": {
     "test": "semistandard || true",
     "build": "webpack --config build/webpack.config.js",
