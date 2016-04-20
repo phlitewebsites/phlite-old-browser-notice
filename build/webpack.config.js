@@ -2,13 +2,14 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'old-browser-notice': './src/old-browser-notice.js'
+    'oldBrowserNotice': './src/old-browser-notice.js',
+    'oldBrowserTest': './src/old-browser-test.js'
   },
   output: {
     path: './dist',
-    filename: 'old-browser-notice.js',
+    filename: '[name].js',
     libraryTarget: 'var',
-    library: 'oldBrowserNotice'
+    library: '[name]'
   },
   plugins: [
     new webpack.DefinePlugin({
