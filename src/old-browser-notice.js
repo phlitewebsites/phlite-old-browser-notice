@@ -10,7 +10,7 @@ module.exports = function oldBrowserNotice () {
     .oldBrowserNotice__inner { display: table-cell; margin: auto; max-width: 600px; vertical-align: middle; }
     .oldBrowserNotice__content { background: #333; border: 3px solid #fff; margin: 16px; padding: 16px; position: relative; }
     .oldBrowserNotice__header { border-bottom: 1px solid #fff; font-size: 22px; margin: 0 0 16px; padding: 0 0 16px; vertical-align: middle; }
-    .oldBrowserNotice__body { line-height: 1.3; }
+    .oldBrowserNotice__body * { line-height: 1.3; color: #fff !important; }
     .oldBrowserNotice__link { color: #fff; display: inline-block; text-decoration: none; vertical-align: top; text-align: center; }
     .oldBrowserNotice__close { cursor: pointer; font-size: 32px; position: absolute; right: 16px; top: 8px; }
     `;
